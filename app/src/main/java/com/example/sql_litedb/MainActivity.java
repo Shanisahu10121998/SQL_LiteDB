@@ -52,6 +52,9 @@ SQLiteDatabase db;
                 showMessage("Errore","Invalid input");
                 return;
             }
+            db.execSQL("INSERT INTO student VALUES('"+editRollno.getText()+"','"+editNAme.getText()+
+                    "','"+editMarks.getText()+"');");
+            showMessage("Success", "Record added");
             clearText();
             Toast.makeText(this, "Add clicked", Toast.LENGTH_SHORT).show();
             break;
